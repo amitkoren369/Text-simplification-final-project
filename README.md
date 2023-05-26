@@ -24,3 +24,16 @@ For the learning process, we utilized Prompt Engineering to teach the model the 
 
 3. Newsela data sets - the corpus consists of thousands of news articles professionally leveled to different reading complexities. It is the most extensive collection of professionally written simplifications available. From this corpus, we extracted 30,000 sentence-aligned pairs, We filters based on the evaluation method so we had left with few thousand at the end. Since this data is not publicly available, you can not find it in the repo, but you can find examples of it in the post-processing version. If needed it is possible to get the data by request from Newsela.
 
+# Evaluation
+To evaluate our model's performance, we utilized multiple evaluation metrics, including BLEU, SARI, Flesch Reading, and Flesch-Kincaid Grade Level.
+
+BLEU is a precision-based metric that quantifies the proportion of n-gram matches between the model's output and the references. Initially designed for machine translation tasks, it has been shown to have a strong correlation with human judgments of grammatical and semantic accuracy.
+
+SARI is another metric used to assess text simplification systems. It compares the model's predicted simplified sentences to the source and reference sentences, measuring the quality of words that were kept, deleted, or added by the system. SARI has been shown to correlate well with human judgments of simplicity gain.
+
+Flesch Reading is a widely used method for evaluating text readability. This method scores the text on a scale from 1 to 100, where higher scores indicate easier readability and lower scores indicate greater difficulty. The formula was developed by Rudolf Flesch in 1940 and considers the total number of words, sentences, and syllables in the text.
+
+Flesch-Kincaid Grade Level considers the same variables as Flesch Reading but outputs the US grade level suitable for the text. This score indicates the number of years of education required to comprehend the text.
+
+
+
